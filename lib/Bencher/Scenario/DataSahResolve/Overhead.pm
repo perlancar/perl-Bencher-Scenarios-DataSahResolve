@@ -11,12 +11,17 @@ our $scenario = {
     summary => 'Benchmark the overhead of resolving schemas',
     modules => {
         'Data::Sah' => {},
+        'Data::Sah::Normalize' => {},
         'Data::Sah::Resolve' => {},
     },
     participants => [
         {
             name => 'resolve_schema',
             perl_cmdline_template => ["-MData::Sah::Resolve=resolve_schema", "-e", 'for (@{ <schemas> }) { resolve_schema($_) }'],
+        },
+        {
+            name => 'normalize_schema',
+            perl_cmdline_template => ["-MData::Sah::Normalize=normalize_schema", "-e", 'for (@{ <schemas> }) { normalize_schema($_) }'],
         },
         {
             name => 'gen_validator',
