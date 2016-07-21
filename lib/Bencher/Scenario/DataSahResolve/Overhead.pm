@@ -9,10 +9,18 @@ use warnings;
 
 our $scenario = {
     summary => 'Benchmark the overhead of resolving schemas',
+    modules => {
+        'Data::Sah' => {},
+        'Data::Sah::Resolve' => {},
+    },
     participants => [
         {
             name => 'resolve_schema',
             perl_cmdline_template => ["-MData::Sah::Resolve=resolve_schema", "-e", 'for (@{ <schemas> }) { resolve_schema($_) }'],
+        },
+        {
+            name => 'gen_validator',
+            perl_cmdline_template => ["-MData::Sah=gen_validator", "-e", 'for (@{ <schemas> }) { gen_validator($_, {return_type=>q(str)}) }'],
         },
     ],
 
