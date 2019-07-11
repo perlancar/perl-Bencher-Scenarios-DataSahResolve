@@ -1,4 +1,4 @@
-0.003   2017-01-25 (PERLANCAR)
+0.003   2017-01-25  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -7,11 +7,11 @@
           type=x_benchmarks.
 
 
-0.002   2016-07-21 (PERLANCAR)
+0.002   2016-07-21  Released-By: PERLANCAR
 
         - Add participants for comparison: normalize_schema, gen_validator.
 
 
-0.001   2016-07-21 (PERLANCAR)
+0.001   2016-07-21  Released-By: PERLANCAR
 
         - First release.
