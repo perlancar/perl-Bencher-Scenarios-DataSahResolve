@@ -1,11 +1,18 @@
 package Bencher::Scenario::DataSahResolve::Overhead;
 
+# AUTHORITY
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
 use strict;
 use warnings;
+
+use Sah::Schema::perl::distname; # to pull dependency
+use Sah::Schema::perl::modname;  # to pull dependency
+use Sah::Schema::poseven;        # to pull dependency
+use Sah::Schema::posint;         # to pull dependency
 
 our $scenario = {
     summary => 'Benchmark the overhead of resolving schemas',
